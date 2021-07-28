@@ -9,14 +9,19 @@ I build an app with a direct and powerful purpose. This app allows you to type i
 ### Collaborators: Ryan G
 
 ### Links and Resources
-* [Deployed Link(ADD LINK)](http://xyz.com)
+* [Deployed Link](cityexplorermark301n22.netlify.app)
 
 * WRRC/UML
 
-* <img src="./src/UML_lab6.jpg" alt="UML" width="200"/>
+> <img src="./src/UML_lab6.jpg" alt="UML" width="200"/>
 
 ### Reflections and Comments
 * Start date (07/28)
+> ### How to build ```.env```
+> 1. Go to .gitignore file
+> 2. Add ```.env``` under ```# misc```
+> 3. Create ```.env``` file in src folder
+> 4. In ```.env``` file, type ```REACT_APP_<nameOfKeyInAllCaps>=<key>```
 
 ### LAB - 06
 
