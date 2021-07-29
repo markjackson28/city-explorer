@@ -29,8 +29,8 @@ Name of feature: Location
 
 Estimate of time needed to complete: 5 Hours
 
-Start time: _____
+Start time: 2pm-4pm then 7pm-10:30pm
 
-Finish time: _____
+Finish time: 10:30pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 5.5 hours
