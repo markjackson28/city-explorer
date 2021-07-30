@@ -9,7 +9,7 @@ I build an app with a direct and powerful purpose. This app allows you to type i
 ### Collaborators: Ryan G
 
 ### Links and Resources
-* [Deployed Link](cityexplorermark301n22.netlify.app)
+* [Deployed Link](https://cityexplorermark301n22.netlify.app/)
 
 * WRRC/UML
 
