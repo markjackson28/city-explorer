@@ -1,11 +1,13 @@
 import React from 'react';
-import axios from 'axios'
-import Location from './Location'
-import Header from './Header'
-import Image from 'react-bootstrap/Image'
-import Alert from 'react-bootstrap/Alert'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
+import axios from 'axios';
+import Header from './Header';
+import Main from './Main';
+import Location from './Location';
+import Footer from './Footer';
+import Image from 'react-bootstrap/Image';
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import './App.css';
 
 
@@ -68,6 +70,7 @@ class App extends React.Component {
         {this.state.renderCityImg ? <Image src={this.state.cityMapImg} alt="map" rounded /> : ''}
         {this.state.renderLatLon ? <h4>Lat: {this.state.lat} Lon: {this.state.lon}</h4> : ''}
         {this.state.renderError ? <Alert variant="danger">{this.state.errorMessage}</Alert> : ''}
+        <Footer />
       </>
     )
   }
