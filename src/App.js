@@ -22,6 +22,8 @@ class App extends React.Component {
       lon: 0,
       renderError: false,
       errorMessage: '',
+      // renderWeather: false,
+      // weatherData: '',
     }
   }
 
@@ -33,8 +35,10 @@ class App extends React.Component {
     e.preventDefault();
 
     try {
-      let cityResults = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.city}&format=json`)
-      let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&center=${this.state.lat},${this.state.lon}&zoom=12`
+      let cityResults = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.city}&format=json`);
+      let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&center=${cityResults.data[0].lat},${cityResults.data[0].lon}&zoom=12`
+      // let weatherInfo = await axios.get(`http://localhost:3001/weather`);
+      // console.log(weatherInfo);
 
       this.setState({
         renderCity: true,
@@ -45,6 +49,8 @@ class App extends React.Component {
         lat: cityResults.data[0].lat,
         lon: cityResults.data[0].lon,
         renderError: false,
+        // renderWeather: true,
+        // weatherData: weatherInfo.data,
       });
     } catch (error) {
       this.setState({
@@ -66,6 +72,8 @@ class App extends React.Component {
         </Form>
         {this.state.renderCity ? <h3>City: {this.state.city}</h3> : ''}
         {this.state.renderCityImg ? <Image src={this.state.cityMapImg} alt="map" rounded /> : ''}
+        {/* {this.state.weatherData.length !== 0 ? this.state.weatherData.map(weather => <h4>{weather.city_name}</h4>) : ''} */}
+        {/* {this.state.renderWeather ? <h4>{this.state.weatherData}</h4> : ''} */}
         {this.state.renderLatLon ? <h4>Lat: {this.state.lat} Lon: {this.state.lon}</h4> : ''}
         {this.state.renderError ? <Alert variant="danger">{this.state.errorMessage}</Alert> : ''}
       </>
