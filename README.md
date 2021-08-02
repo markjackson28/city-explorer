@@ -34,3 +34,15 @@ Start time: 2pm-4pm then 7pm-10:30pm
 Finish time: 10:30pm
 
 Actual time needed to complete: 5.5 hours
+
+### LAB - 07
+
+Name of feature: Add weather/server
+
+Estimate of time needed to complete: 5 Hours
+
+Start time: 1:30pm
+
+Finish time: 7:30pm (08/01)
+
+Actual time needed to complete: A long time.
