@@ -12,6 +12,7 @@ class Main extends React.Component {
     super(props);
     this.state = {
       renderCity: false,
+      cityQuery: '',
       city: '',
       renderCityImg: false,
       cityMapImg: '',
@@ -24,12 +25,14 @@ class Main extends React.Component {
       renderWeatherError: false,
       renderWeather: false,
       weatherData: [],
+      movieData: [],
+      renderMovieData: false,
     }
   }
 
   handleChange = e => {
     this.setState({
-      city: e.target.value,
+      cityQuery: e.target.value,
     });
   }
 
@@ -37,21 +40,18 @@ class Main extends React.Component {
     e.preventDefault();
 
     try {
-      let cityResults = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.city}&format=json`);
+      let cityResults = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.cityQuery}&format=json`);
       let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&center=${cityResults.data[0].lat},${cityResults.data[0].lon}&zoom=12`
-      // let weatherInfo = await axios.get(`http://localhost:3001/weather?city=${this.state.city}`);
 
       this.setState({
         renderCity: true,
         renderCityImg: true,
         cityMapImg: cityMap,
         renderLatLon: true,
-        // city: cityResults.data[0].display_name,
+        city: cityResults.data[0].display_name,
         lat: cityResults.data[0].lat,
         lon: cityResults.data[0].lon,
         renderCityError: false,
-        // weatherData: weatherInfo.data,
-        // renderWeather: true,
       });
     } catch (error) {
       this.setState({
@@ -63,12 +63,12 @@ class Main extends React.Component {
       });
     }
     this.getWeatherInfo();
+    this.getMovieInfo();
   }
 
   getWeatherInfo = async (e) => {
     try {
-      let weatherInfo = await axios.get(`http://localhost:3001/weather?city=${this.state.city}`);
-
+      let weatherInfo = await axios.get(`http://localhost:3001/weather?lat=${this.state.lat}&lon=${this.state.lon}&city=${this.state.city}`);
       this.setState({
         weatherData: weatherInfo.data,
         renderWeather: true,
@@ -79,6 +79,21 @@ class Main extends React.Component {
         renderWeather: false,
         renderWeatherError: true,
         weatherErrorMessage: `Error Occured: ${error.response.status}, ${error.response.data}`,
+      });
+    }
+  }
+
+  getMovieInfo = async (e) => {
+    try {
+      let movieInfo = await axios.get(`http://localhost:3001/movies?city=${this.state.city}`);
+      console.log(movieInfo);
+      this.setState({
+        movieData: movieInfo.data,
+        renderMovieData: true,
+      });
+    } catch (error) {
+      this.setState({
+        renderMovieData: false,
       });
     }
   }
@@ -97,6 +112,7 @@ class Main extends React.Component {
         {this.state.renderLatLon ? <h4>Lat: {this.state.lat} Lon: {this.state.lon}</h4> : ''}
         {this.state.renderCityError ? <Alert variant="danger">{this.state.cityErrorMessage}</Alert> : ''}
         {this.state.renderWeatherError ? <Alert variant="danger">{this.state.weatherErrorMessage}</Alert> : ''}
+        {this.state.renderMovieData ? <h4>Movies: {this.state.movieData}</h4> : ''}
       </main>
     )
   }
