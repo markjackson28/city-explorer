@@ -52,14 +52,14 @@ Finish time: 7:30pm (08/01)
 
 Actual time needed to complete: A long time.
 
-## LAB - 08 
+## LAB - 08
 
 Name of feature: Add live weather/server
 
 Estimate of time needed to complete: 7 Hours
 
-Start time: 2:50pm
+Start time: 2:50pm (08/03)
 
-Finish time: 
+Finish time: 4:02pm (08/06)
 
-Actual time needed to complete: 
+Actual time needed to complete: 8 Hours
