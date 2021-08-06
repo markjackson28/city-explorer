@@ -6,14 +6,19 @@ I build an app with a direct and powerful purpose. This app allows you to type i
 
 ### Author: Mark Thanadabouth
 
-### Collaborators: Ryan G
+### Collaborators: Phil Murphy, Wil J, Charlie F, Ryan G
 
 ### Links and Resources
 * [Deployed Link](https://cityexplorermark301n22.netlify.app/)
+* [Trello Board](https://trello.com/b/J5ZiKzZu/301n22-cityexplorere)
 
 * WRRC/UML
 
-> <img src="./src/UML_lab6.jpg" alt="UML" width="200"/>
+> <img src="./src/photos/UML_lab6.jpg" alt="UML" width="200"/>
+
+> <img src="./src/photos/lab07UML.png" alt="UML" width="200"/>
+
+> <img src="./src/photos/lab08_UML.jpg" alt="UML" width="200"/>
 
 ### Reflections and Comments
 * Start date (07/28)
@@ -46,3 +51,15 @@ Start time: 1:30pm
 Finish time: 7:30pm (08/01)
 
 Actual time needed to complete: A long time.
+
+## LAB - 08
+
+Name of feature: Add live weather/server
+
+Estimate of time needed to complete: 7 Hours
+
+Start time: 2:50pm (08/03)
+
+Finish time: 4:02pm (08/06)
+
+Actual time needed to complete: 8 Hours

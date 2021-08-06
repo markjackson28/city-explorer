@@ -1,10 +1,11 @@
 import React from 'react';
+// import Footer from 'react-bootstrap/Footer';
 
 class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <h3>&copy;2021 Mark T.</h3>
+        <h5>&copy;2021 Mark T.</h5>
       </footer>
     )
   }
