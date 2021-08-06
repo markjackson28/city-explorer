@@ -14,11 +14,11 @@ I build an app with a direct and powerful purpose. This app allows you to type i
 
 * WRRC/UML
 
-> <img src="./src/UML_lab6.jpg" alt="UML" width="200"/>
+> <img src="./src/photos/UML_lab6.jpg" alt="UML" width="200"/>
 
-> <img src="./src/lab07UML.png" alt="UML" width="200"/>
+> <img src="./src/photos/lab07UML.png" alt="UML" width="200"/>
 
-> <img src="./src/lab08_UML.jpg" alt="UML" width="200"/>
+> <img src="./src/photos/lab08_UML.jpg" alt="UML" width="200"/>
 
 ### Reflections and Comments
 * Start date (07/28)
