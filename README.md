@@ -10,6 +10,7 @@ I build an app with a direct and powerful purpose. This app allows you to type i
 
 ### Links and Resources
 * [Deployed Link](https://cityexplorermark301n22.netlify.app/)
+* [Deployed Server](https://city-explorer-server-301n22mt.herokuapp.com/)
 * [Trello Board](https://trello.com/b/J5ZiKzZu/301n22-cityexplorere)
 
 * WRRC/UML
@@ -52,7 +53,7 @@ Finish time: 7:30pm (08/01)
 
 Actual time needed to complete: A long time.
 
-## LAB - 08
+### LAB - 08
 
 Name of feature: Add live weather/server
 
