@@ -67,12 +67,12 @@ Actual time needed to complete: 8 Hours
 
 ### LAB - 09
 
-Name of feature: Add live weather/server
+Name of feature: Refactoring
 
-Estimate of time needed to complete: 7 Hours
+Estimate of time needed to complete: 2 Hours
 
 Start time: 1:00pm
 
-Finish time: 
+Finish time: 2:30pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 1.5 Hours
