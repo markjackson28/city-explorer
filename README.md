@@ -1,4 +1,4 @@
-# LAB - 06
+# LAB - 09
 
 ## City Explorer
 
@@ -64,3 +64,15 @@ Start time: 2:50pm (08/03)
 Finish time: 4:02pm (08/06)
 
 Actual time needed to complete: 8 Hours
+
+### LAB - 09
+
+Name of feature: Refactoring
+
+Estimate of time needed to complete: 2 Hours
+
+Start time: 1:00pm
+
+Finish time: 2:30pm
+
+Actual time needed to complete: 1.5 Hours

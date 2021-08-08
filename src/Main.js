@@ -1,14 +1,19 @@
 import React from 'react';
 import axios from 'axios';
-// import Cities from './Cities';
+
+// Components
 import Weather from './Weather';
 import Movies from './Movies';
+
+// Bootstrap
 import Image from 'react-bootstrap/Image';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 class Main extends React.Component {
+
+// Setting intial state
   constructor(props) {
     super(props);
     this.state = {
@@ -35,6 +40,7 @@ class Main extends React.Component {
     }
   }
   
+// Targets user input
   handleChange = e => {
     this.setState({
       cityQuery: e.target.value,
@@ -44,10 +50,11 @@ class Main extends React.Component {
   getCityInfo = async (e) => {
     e.preventDefault();
 
+// City results
     try {
       let cityResults = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.cityQuery}&format=json`);
       let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&center=${cityResults.data[0].lat},${cityResults.data[0].lon}&zoom=12`
-
+// This 'sets' the state to what you want after render
       this.setState({
         renderCity: true,
         renderCityImg: true,
@@ -69,14 +76,16 @@ class Main extends React.Component {
         cityErrorMessage: `Error Occured: ${error.response.status}, ${error.response.data.error}`,
       });
     }
+// Calling the other functions when this function runs
     this.getMovieInfo();
     this.getWeatherInfo();
   }
 
+// Weather Results
   getWeatherInfo = async (e) => {
     try {
       let weatherInfo = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`);
-      console.log(weatherInfo.data);
+      // console.log(weatherInfo.data);
       this.setState({
         weatherData: weatherInfo.data,
         renderWeather: true,
@@ -94,6 +103,7 @@ class Main extends React.Component {
     }
   }
   
+// Movie results
   getMovieInfo = async (e) => {
     try {
       let movieInfo = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/movies?city=${this.state.cityQuery}`);
@@ -120,6 +130,7 @@ class Main extends React.Component {
     // console.log(this.state.movieErrorMessage);
     return (
       <main>
+         {/* Form to get user info */}
         <Form onSubmit={this.getCityInfo}>
           <Form.Label>Enter in a city!</Form.Label>
           <Form.Control input type="text" placeholder="City" onChange={this.handleChange} />
