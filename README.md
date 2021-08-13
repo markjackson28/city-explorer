@@ -1,12 +1,12 @@
-# LAB - 09
+# Current LAB - 10
 
 ## City Explorer
 
-I build an app with a direct and powerful purpose. This app allows you to type in a city and display the longitude, latitude, and a map of the city.
+I build an app with a direct and powerful purpose. This app allows you to type in a city and display the longitude, latitude, a map of the city, 16 day weather forcast and movies related to your city search.
 
 ### Author: Mark Thanadabouth
 
-### Collaborators: Phil Murphy, Wil J, Charlie F, Ryan G
+### Collaborators: Phil Murphy, Wil J, Charlie F, Yirim S, Connor B, Clarissa P, Ryan G(Instructor), JP(Assistant Instructor), Brandon G(TA)
 
 ### Links and Resources
 * [Deployed Link](https://cityexplorermark301n22.netlify.app/)
@@ -20,6 +20,8 @@ I build an app with a direct and powerful purpose. This app allows you to type i
 > <img src="./src/photos/lab07UML.png" alt="UML" width="200"/>
 
 > <img src="./src/photos/lab08_UML.jpg" alt="UML" width="200"/>
+
+> <img src="./src/photos/UML_Lab10.jpg" alt="UML" width="200"/> 
 
 ### Reflections and Comments
 * Start date (07/28)
@@ -76,3 +78,15 @@ Start time: 1:00pm
 Finish time: 2:30pm
 
 Actual time needed to complete: 1.5 Hours
+
+### LAB - 10
+
+Name of feature: Cache
+
+Estimate of time needed to complete: 5 Hours
+
+Start time: 8:30pm (08/10)
+
+Finish time: 8:30pm (08/12)
+
+Actual time needed to complete: 5 Hours
