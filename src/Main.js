@@ -66,6 +66,7 @@ class Main extends React.Component {
         renderCityError: false,
       });
     } catch (error) {
+      console.log(`city data`, error);
       this.setState({
         lat: null,
         lon: null,
@@ -97,13 +98,12 @@ class Main extends React.Component {
         renderWeather: false,
         renderWeatherError: true,
         renderWeatherHeader: false,
-        renderMovieHeader: false,
         weatherErrorMessage: `Error Occured: ${error.response.status}, ${error.response.data}`,
       });
+      // console.log(`weather`, error);
     }
   }
-  
-// Movie results
+  // Movie results
   getMovieInfo = async (e) => {
     try {
       let movieInfo = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/movies?city=${this.state.cityQuery}`);
@@ -119,15 +119,16 @@ class Main extends React.Component {
         renderMovieData: false,
         renderMovieError: true,
         renderMovieHeader: false,
-        movieErrorMessage: `Error Occured: ${error.response.status}, ${error.response.result}`,
+        movieErrorMessage: `Error Occured: ${error.response.status}, ${error.response.data}`,
       });
     }
   }
   
   render() {
-    // console.log(this.state);
+    console.log(this.state);
     // console.log(this.state.weatherErrorMessage);
     // console.log(this.state.movieErrorMessage);
+   
     return (
       <main>
          {/* Form to get user info */}
@@ -148,7 +149,7 @@ class Main extends React.Component {
         {this.state.renderLatLon ? <h4>Lat: {this.state.lat} Lon: {this.state.lon}</h4> : ''}
 
         {/* Renders weather */}
-        {this.state.renderWeatherHeader ? <h3>16 Day Forcast</h3> : ''}
+        {this.state.renderWeatherHeader ? <h3>5 Day Forcast</h3> : ''}
         <Weather renderWeather={this.state.renderWeather} weatherData={this.state.weatherData} />
         {this.state.renderWeatherError ? <Alert variant="danger">{this.state.weatherErrorMessage}</Alert> : ''}
 

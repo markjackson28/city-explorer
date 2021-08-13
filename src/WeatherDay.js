@@ -8,8 +8,8 @@ class WeatherDay extends React.Component {
     let carouselItem = this.props.weatherData.map((city, index) => (
       <Carousel.Item>
         <Carousel.Caption>
-          <h4 key={index}>{city.date}</h4>
-          <p>{city.description}</p>
+          <h4 key={index}>{city.time}</h4>
+          <p>{city.forecast}</p>
         </Carousel.Caption>
       </Carousel.Item>
     ))
